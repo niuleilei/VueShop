@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/mint-ui/lib/style.css">
+		  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+         <script src="https://unpkg.com/mint-ui/lib/index.js"></script>
+		
+		<script type="text/javascript" src="js/VueShop.js" ></script>
+	</head>
+	
+	<body>
+		<div id="app">
+			<mt-button type="danger" @click='show'>danger</mt-button>
+		</div>
+		
+	</body>
+	<script>
+		var vm=new Vue({
+			el:"#app",
+			data:{
+				popupVisible:false
+			},
+			methods:{
+				show(){
+					this.$indicator.open({
+					  text: '加载中...',
+					  spinnerType: 'fading-circle'
+					});
+				}
+			}
+		})
+	</script>
+</html>
